@@ -30,10 +30,12 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: CategoryScreen(),
+
       //route table takes map
       routes: {
-        '/category-meals':(context) => CategoryMealsScreen()
+        //home has a default route of '/'
+        '/':(context) => CategoryScreen(),
+        CategoryMealsScreen.routeName:(context) => CategoryMealsScreen()
       },
     );
   }
