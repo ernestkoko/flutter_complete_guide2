@@ -10,7 +10,7 @@ const DUMMY_CATEGORIES = const [
     color: Colors.red,),
   Category(id: 'c3',
     title: 'Hamburgers',
-    color: Colors.purple,),
+    color: Colors.orange,),
   Category(id: 'c4',
     title: 'German',
     color: Colors.amber,),
