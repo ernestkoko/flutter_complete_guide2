@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide2/category_meals_screen.dart';
 
 import './categories_screens.dart';
 
@@ -30,6 +31,10 @@ class MyApp extends StatelessWidget {
 
       ),
       home: CategoryScreen(),
+      //route table takes map
+      routes: {
+        '/category-meals':(context) => CategoryMealsScreen()
+      },
     );
   }
 }
