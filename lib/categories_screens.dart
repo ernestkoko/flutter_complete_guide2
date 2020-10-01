@@ -3,6 +3,7 @@ import 'package:flutter_complete_guide2/category_item.dart';
 import './dummy_data.dart';
 
 class CategoryScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +12,7 @@ class CategoryScreen extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         //we call toList at the end of map to change it from iterable to a list
         children: DUMMY_CATEGORIES.map((catData) =>
-            CategoryItem(title: catData.title, color: catData.color,)).toList(),
+            CategoryItem(id: catData.id,title: catData.title, color: catData.color,)).toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
