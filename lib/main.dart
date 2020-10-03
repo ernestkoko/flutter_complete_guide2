@@ -19,14 +19,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
-        canvasColor: Color.fromARGB(1, 255, 254, 229),
+        canvasColor: Color.fromARGB(255, 255, 254, 229),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
             bodyText1: TextStyle(
-              color: Color.fromARGB(1, 20, 51, 51),
+              color: Color.fromARGB(255, 20, 51, 51),
             ),
             bodyText2: TextStyle(
-              color: Color.fromARGB(1, 20, 51, 51),
+              color: Color.fromARGB(253, 20, 51, 51),
             ),
             headline6: TextStyle(
                 fontSize: 24.0,

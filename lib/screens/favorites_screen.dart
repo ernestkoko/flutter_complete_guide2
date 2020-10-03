@@ -6,7 +6,7 @@ class FavoritesScreen extends StatelessWidget {
     return Center(
       child: Text(
         'Favorites',
-        style: TextStyle(color: Colors.white),
+
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide2/screens/categories_screens.dart';
 import 'package:flutter_complete_guide2/screens/favorites_screen.dart';
+import 'package:flutter_complete_guide2/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -25,6 +26,7 @@ class _TabsScreenState extends State<TabsScreen> {
     //add tab to the bottom of the app bar
     return Scaffold(
       appBar: AppBar(title: Text(_pages[_selectedPageIndex]['title'])),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
