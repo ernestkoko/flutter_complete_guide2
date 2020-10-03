@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide2/screens/meal_detail_screen.dart';
+import 'package:flutter_complete_guide2/screens/tabs_screen.dart';
 
 import 'file:///C:/Users/user/flutter/flutter_complete_guide2/lib/screens/category_meals_screen.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       //route table takes map
       routes: {
         //home has a default route of '/'
-        '/': (context) => CategoryScreen(),
+        '/': (context) => TabsScreen(),
         CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (context) => MealDetailScreen()
       },

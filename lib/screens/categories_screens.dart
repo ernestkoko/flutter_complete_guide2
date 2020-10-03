@@ -6,9 +6,7 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('DeliMeals'),),
-      body: GridView(
+    return GridView(
         padding: const EdgeInsets.all(25.0),
         //we call toList at the end of map to change it from iterable to a list
         children: DUMMY_CATEGORIES.map((catData) =>
@@ -20,7 +18,7 @@ class CategoryScreen extends StatelessWidget {
           mainAxisSpacing: 20,
         ),
 
-      ),
+
     );
   }
 }
