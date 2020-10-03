@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide2/category_meals_screen.dart';
+import 'package:flutter_complete_guide2/screens/meal_detail_screen.dart';
 
-import './categories_screens.dart';
+import 'file:///C:/Users/user/flutter/flutter_complete_guide2/lib/screens/category_meals_screen.dart';
+
+import 'screens/categories_screens.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,23 +21,35 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromARGB(1, 255, 254, 229),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-              bodyText1: TextStyle(
-                color: Color.fromARGB(1, 20, 51, 51),
-              ),
-          bodyText2: TextStyle(
-            color: Color.fromARGB(1, 20, 51, 51),
-          ),
-          headline6: TextStyle(fontSize: 24.0, fontFamily: "RobotoCondensed", fontWeight: FontWeight.bold)
+            bodyText1: TextStyle(
+              color: Color.fromARGB(1, 20, 51, 51),
             ),
-
-
+            bodyText2: TextStyle(
+              color: Color.fromARGB(1, 20, 51, 51),
+            ),
+            headline6: TextStyle(
+                fontSize: 24.0,
+                fontFamily: "RobotoCondensed",
+                fontWeight: FontWeight.bold)),
       ),
 
       //route table takes map
       routes: {
         //home has a default route of '/'
-        '/':(context) => CategoryScreen(),
-        CategoryMealsScreen.routeName:(context) => CategoryMealsScreen()
+        '/': (context) => CategoryScreen(),
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (context) => MealDetailScreen()
+      },
+      //this route is called when we try to go to an unregistered route
+      // onGenerateRoute:(settings){
+      //   print(settings.name);
+      //   return MaterialPageRoute(builder: (cxt) => CategoryScreen());
+      // } ,
+      //reached when flutter fails to build a screen with all other measures
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) => CategoryScreen(),
+        );
       },
     );
   }
