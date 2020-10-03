@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide2/screens/filters_screen.dart';
 import 'package:flutter_complete_guide2/screens/meal_detail_screen.dart';
 import 'package:flutter_complete_guide2/screens/tabs_screen.dart';
 
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
         //home has a default route of '/'
         '/': (context) => TabsScreen(),
         CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (context) => MealDetailScreen()
+        MealDetailScreen.routeName: (context) => MealDetailScreen(),
+        FilterScreen.routeName: (context) => FilterScreen()
       },
       //this route is called when we try to go to an unregistered route
       // onGenerateRoute:(settings){
